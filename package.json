@@ -1,0 +1,12 @@
+{
+  "nameRemark": "项目部署后的根路径",
+  "name": "alone-note-public",
+  "devDependencies": {
+    "vitepress": "^1.3.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
