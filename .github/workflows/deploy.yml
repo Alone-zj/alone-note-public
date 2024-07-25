@@ -1,15 +1,20 @@
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
-name: Deploy VitePress site to Pages
+name: 部署VitePress
 
 on:
   # 在针对 `main` 分支的推送上运行。如果你
   # 使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
 
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
+# 设置时区
+env:
+  TZ: Asia/Shanghai
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
@@ -27,28 +32,50 @@ jobs:
   # 构建工作
   build:
     runs-on: ubuntu-latest
+    # node v20 运行
+    strategy:
+      matrix:
+        node-version: [ 20 ]
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
-      # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
-      - name: Setup Node
-        uses: actions/setup-node@v4
+
+      # 设置使用 Node.js 版本
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
-          cache: npm # 或 pnpm / yarn
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+          node-version: ${{ matrix.node-version }}
+
+      # 使用 最新的 PNPM
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: latest
+          # version: 9
+          run_install: false
+        # 安装依赖
       - name: Install dependencies
-        run: npm ci # 或 pnpm install / yarn install / bun install
+        run: pnpm install --frozen-lockfile
+
+      # 构建项目
       - name: Build with VitePress
-        run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+        run: |
+          echo ${{ github.workspace }} 
+          pnpm run docs:build
+
+        # 资源拷贝
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./.vitepress/dist
+          destination: ./_site
+
+      # 资源拷贝
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
 
   # 部署工作
   deploy:
