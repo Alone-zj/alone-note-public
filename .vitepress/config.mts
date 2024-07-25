@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base:"/alone-note-public",
+  base:"/alone-note-public/",
   title: "Alone Note Project(title)",
   titleTemplate: "Alone Note Project",
   description: "A VitePress Site",
