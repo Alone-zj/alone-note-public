@@ -2,9 +2,13 @@
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
+这个页面展示了一些由VitePress提供的内置降价扩展。
+
 ## Syntax Highlighting
 
 VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+
+VitePress提供由[Shiki](https://github.com/shikijs/shiki)提供的语法高亮显示功能，还具有行高亮显示等附加功能:
 
 **Input**
 

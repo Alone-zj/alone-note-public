@@ -1,5 +1,5 @@
 {
-  "nameRemark": "项目部署后的根路径",
+  "nameRemark": "项目部署后的根路径github仓库名",
   "name": "alone-note-public",
   "devDependencies": {
     "vitepress": "^1.3.1"
