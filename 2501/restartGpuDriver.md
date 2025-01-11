@@ -20,6 +20,12 @@
 
 [下载restartGpuDriver.zip](/.vitepress/public/logo.png)
 
+[ssss](restartGpuDriver.zip)
+
+
+
+/alone-note-public/assets/image-20250111135032031.BaaJe71D.png
+
 #### **实现步骤：**
 
 在 Windows 系统中，`devcon` 工具是设备管理器的命令行接口，能够通过命令行对设备进行管理，包括启用、禁用和重启等操作。可以利用该工具对显卡驱动进行重启。

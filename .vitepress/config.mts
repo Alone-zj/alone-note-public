@@ -7,7 +7,7 @@ export default defineConfig({
   titleTemplate: "Alone Note Project",
   description: "A VitePress Site",
   head: [
-    ['link', { rel: 'icon', href: '/.vitepress/public/logo.png' }]
+    ['link', { rel: 'icon', href: 'public/favicon.ico' }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -21,7 +21,9 @@ export default defineConfig({
         text: '示例',
         items: [
           { text: 'Markdown示例', link: '/markdown-examples' },
+            { text: '2501', link: '/2501/restartGpuDriver' },
           { text: 'API示例', link: '/api-examples' }
+
         ]
       }
     ],
