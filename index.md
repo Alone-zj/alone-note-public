@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Alone Note Project"
   text: "A VitePress Site"
-  tagline: My great project tagline
+  tagline: 空空如也
   actions:
     - theme: brand
       text: Markdown Examples
@@ -13,13 +13,15 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - theme: 202501
+      text: restartGpuDriver
+      link: /2501/restartGpuDriver.md
+#features:
+#  - title: Feature A
+#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#  - title: Feature B
+#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+#  - title: Feature C
+#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
