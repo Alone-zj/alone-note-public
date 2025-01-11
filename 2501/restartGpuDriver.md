@@ -20,7 +20,7 @@
 
 [下载restartGpuDriver.zip](/.vitepress/public/logo.png)
 
-[ssss](restartGpuDriver.zip)
+[松松](/restartGpuDriver.zip)
 
 
 
