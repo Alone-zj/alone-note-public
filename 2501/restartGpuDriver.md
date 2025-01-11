@@ -18,9 +18,7 @@
 
  Windows 10 家庭版 22H2 系统可直接使用，其他版本没有测试。
 
-[下载restartGpuDriver.zip](restartGpuDriver.zip)
-
-
+[下载restartGpuDriver.zip](/.vitepress/public/logo.png)
 
 #### **实现步骤：**
 
