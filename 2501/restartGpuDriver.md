@@ -18,13 +18,9 @@
 
  Windows 10 家庭版 22H2 系统可直接使用，其他版本没有测试。
 
-[下载restartGpuDriver.zip](/.vitepress/public/logo.png)
+<a href="/alone-note-public/restartGpuDriver.zip">下载restartGpuDriver.zip</a>
 
-[松松](/restartGpuDriver.zip)
-
-
-
-/alone-note-public/assets/image-20250111135032031.BaaJe71D.png
+![image-20250111151534322](img/restartGpuDriver.assets/image-20250111151534322.png)
 
 #### **实现步骤：**
 
@@ -67,7 +63,7 @@ REM 替换 "PCI\VEN_10DE&DEV_2520*" 为你的硬件 ID, 星号为模糊匹配
 set DEVICE_ID="PCI\VEN_10DE&DEV_2520*"
 ```
 
-4.双击运行restartGPUDriver.bat
+4.双击运行restartGPUDriver.bat或发送到桌面快捷方式
 
 
 
